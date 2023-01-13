@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test page</title>
+</head>
+<body>
+
+    <header>
+        <h1>Blog website</h1>
+    </header>
+
+    <main>
+
+        <div class="containerPost">
+            <h2 class="label">label</h2>
+            <h3 class="userName"> user name</h3>
+            <img src="" alt="avatar">
+            <div class="topic">Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Quasi incidunt aliquid autem corrupti cumque repellat dignissimos mollitia ut beatae dolore?</div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="creatPost">
+
+            <form action="wBlog.php" method="post">
+
+                <h2>Creat a post</h2>
+
+                <input type="text" name="userName" id="userName" placeholder="Enter your user name">
+
+                <br>
+                <input type="text" name="hLabel" id="hLabel" placeholder="Enter the post label">
+
+                <br>
+                <textarea name="writingArea" id="writingArea" placeholder="What do you think ?">
+
+                </textarea>
+        
+                <br>
+                <input type="submit" name="send" id="send">
+
+            </form>
+
+        </div>
+
+    </main>
+    
+</body>
+</html>
