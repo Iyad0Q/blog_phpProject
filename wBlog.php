@@ -1,9 +1,16 @@
+<?php 
 
+error_reporting(E_ERROR | E_PARSE);
+include "includes/connect.php";
+include "includes/style.php";
+
+
+?>
 
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +23,7 @@
 
             <form action="wBlog.php" method="post">
 
-                <h2>Creat a post</h2>
+                <h2>Creat a new post</h2>
 
                 <input type="text" name="userName" id="userName" placeholder="Enter your user name">
 

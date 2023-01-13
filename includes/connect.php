@@ -1,25 +1,26 @@
 <?php
 
-$hostName = "localhost";
-$user = "root";
-$pass = "";
-$dbName = "blogproject";
 
+$send = isset($_POST['send']);
 
+if (isset($send)) {
 
-if (isset($_Post['send'])) {
+    $userName = $_POST['userName'];
+    $hLabel = $_POST['hLabel'];
+    $writingArea = $_POST['writingArea'];
 
-    $userName = $_Post['userName'];
-    $hLabel = $_Post['hLabel'];
-    $writingArea = $_Post['writingArea'];
+    $hostName = "localhost";
+    $user = "root";
+    $pass = "";
+    $dbName = "blogproject";
 
     $connect = mysqli_connect($hostName, $user, $pass, $dbName);
+    $insert = "INSERT INTO postdata(userName, hLabel, writingArea) VALUES ('$userName', '$hLabel', '$writingArea')";
+    $query = mysqli_query($connect, $insert);
 
-    if(!$connect) {
-        echo "We have a problem";
-    }
 
-}
+
+} 
 
 
 
