@@ -9,12 +9,6 @@ $select = "SELECT * FROM postdata";
 $query2 = mysqli_query($connect, $select);
 $posts = mysqli_fetch_all($query2, MYSQLI_ASSOC);
 
-foreach ($posts as $post) {
-    echo htmlspecialchars($post["userName"]);
-}
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -42,6 +36,36 @@ foreach ($posts as $post) {
             <br>
             <div id="post">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
         </div>
+
+
+        <?php
+
+
+        foreach ($posts as $post) { $labelPost = htmlspecialchars($post["hLabel"]); }
+        foreach ($posts as $post) { $userPost = htmlspecialchars($post["userName"]); } 
+        foreach ($posts as $post) { $textPost = htmlspecialchars($post["writingArea"]); }
+        
+        foreach ($posts as $post) {
+            echo "
+            
+            <div class='containerPost'>
+            <h2 id='label'>". htmlspecialchars($post["hLabel"]) ."</h2>
+                <br>
+                <h3 id='name'>". htmlspecialchars($post["userName"]) ."</h3>
+                <br>
+                <div id='post'>". htmlspecialchars($post["writingArea"]) ."</div>
+            </div>
+        
+            ";
+        }
+
+        
+        
+        
+        
+        ?>
+
+
 
 
 
