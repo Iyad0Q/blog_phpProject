@@ -2,6 +2,7 @@
 
 error_reporting(E_ERROR | E_PARSE);
 include "includes/connect.php";
+include "includes/send.php";
 include "includes/style.php";
 
 
@@ -31,14 +32,16 @@ include "includes/style.php";
                 <input type="text" name="hLabel" id="hLabel" placeholder="Enter the post label">
 
                 <br>
-                <textarea name="writingArea" id="writingArea" placeholder="What do you think ?">
-
-                </textarea>
+                <textarea name="writingArea" id="writingArea" placeholder="What do you think ?"></textarea>
 
                 <br>
                 <input type="submit" name="send" id="send">
 
             </form>
+
+            <br>
+
+            <a href="home.php">back to home page</a>
 
         </main>
         
